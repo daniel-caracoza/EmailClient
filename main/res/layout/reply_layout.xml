@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reply"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.registration.ReplyActivity">
+
+
+    <TextView
+        android:id="@+id/reply_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="To:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/reply_text_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_toEndOf="@id/reply_to"
+        android:layout_toRightOf="@id/reply_to"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/background_dark"
+        android:textCursorDrawable="@color/colorBackground"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/reply_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reply_to"
+        android:padding="10dp"
+        android:text="Subject:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_dark" />
+
+    <EditText
+        android:id="@+id/reply_edit_text_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reply_text_to"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/reply_subject"
+        android:layout_toRightOf="@id/reply_subject"
+        android:inputType="textEmailSubject"
+        android:textColor="@android:color/background_dark"
+        android:textCursorDrawable="@color/colorBackground" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message:"
+        android:padding="10dp"
+        android:layout_below="@id/reply_subject"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_dark" />
+
+    <EditText
+        android:id="@+id/reply_edit_text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:layout_below="@id/message"
+        android:lines="6"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+            android:id="@+id/rtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_edit_text_message"
+            android:layout_margin="8dp"
+            android:ems="12"
+            android:text="TextView"
+            android:textColor="@android:color/background_dark"
+            android:textSize="17sp" />
+
+    <View
+            android:id="@+id/rline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rtitle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#D3D3D3" />
+
+    <TextView
+            android:id="@+id/ricon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/rline"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_oval"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+
+    <TextView
+            android:id="@+id/rsender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ricon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/ricon"
+            android:layout_toRightOf="@+id/ricon"
+            android:text="TextView"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/rtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/rsender"
+            android:layout_alignStart="@id/rsender"
+            android:layout_below="@id/rsender"
+            android:textColor="@android:color/background_dark"
+            android:text="TextView" />
+
+    <TextView
+            android:id="@+id/rdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ricon"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:lines="8"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginTop="20dp"
+            android:text="TextView" />
+
+    <Button
+        android:id="@+id/reply_button_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rdetails"
+        android:onClick="replyEmail"
+        android:padding="10dp"
+        android:text="send"
+        android:textColor="@android:color/background_dark" />
+
+
+</RelativeLayout>

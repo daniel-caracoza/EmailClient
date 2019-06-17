@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_inbox"
+            android:icon="@android:drawable/sym_action_email"
+            android:title="@string/menu_inbox"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_drafts"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="@string/menu_drafts" />
+        <item
+            android:id="@+id/nav_sent"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="@string/menu_sent" />
+        <item
+            android:id="@+id/nav_trash"
+            android:icon="@android:drawable/ic_menu_delete"
+            android:title="@string/menu_trash" />
+        <item
+            android:id="@+id/nav_important"
+            android:icon="@android:drawable/btn_star"
+            android:title="@string/menu_important"/>
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/cont"
+            android:title="@string/menu_contacts" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="@string/menu_calendar" />
+    </group>
+
+    <item android:title="@string/Manage">
+        <menu>
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@android:drawable/ic_menu_manage"
+                android:title="@string/menu_account" />
+
+        </menu>
+    </item>
+
+</menu>
